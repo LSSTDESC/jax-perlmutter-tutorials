@@ -1,6 +1,17 @@
 # JAX Perlmutter Tutorials
 Collection of tips and tutorials for running [JAX](https://github.com/google/jax) on [Perlmutter](https://www.nersc.gov/systems/perlmutter/)
 
+## Tutorials
+
+1. **First Introduction to JAX** | [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LSSTDESC/jax-perlmutter-tutorials/blob/main/notebooks/DESCJaxTutorial.ipynb)   
+    *Authors:* [@EiffL](https://github.com/EiffL)  
+    Covers the basic concepts of JAX with a few examples and common gotchas. Presented in July 2021.
+    
+2. **DESC DC2 Telecon: Practical introduction to JAX** | [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LSSTDESC/jax-perlmutter-tutorials/blob/main/notebooks/DESCJaxTutorial_Dec2021.ipynb)   
+    *Authors:* [@EiffL](https://github.com/EiffL)   
+    Covers a few examples of JAX uses cases: implemeting Limber integration, Fisher forecasts, running parallel MCMCs, fitting galaxy light profiles. Presented in Dec. 2021.
+
+
 ## Installing JAX on Perlmutter (Jan. 2022)
 
 #### Installing JAX in the default python environment
