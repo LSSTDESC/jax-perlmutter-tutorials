@@ -12,16 +12,16 @@ Collection of tips and tutorials for running [JAX](https://github.com/google/jax
     Covers a few examples of JAX uses cases: implemeting Limber integration, Fisher forecasts, running parallel MCMCs, fitting galaxy light profiles. Presented in Dec. 2021.
 
 
-## Installing JAX on Perlmutter (Jan. 2022)
+## Installing JAX on Perlmutter (Aug. 2022)
 
 #### Installing JAX in the default python environment
 
 Installing JAX on Perlmutter is easy if you follow these steps:
 ```bash
-module load python cudnn/8.2.0 nccl/2.11.4 cudatoolkit/21.9_11.4 
+module load python cudnn/8.2.0 nccl/2.11.4 cudatoolkit
 pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_releases.html
 ```
-And that's it, but note that to run properly, JAX will require that you load the following modules: `cudnn/8.2.0` `nccl/2.11.4` `cudatoolkit/21.9_11.4`. 
+And that's it, but note that to run properly, JAX will require that you load the following modules: `cudnn/8.2.0` `nccl/2.11.4` `cudatoolkit`. 
 
 #### Making JAX available in JupyterLab
 
@@ -63,8 +63,13 @@ Open the `kernel.json` file and edit to the following:
 Now, in addition, create a new file in the same directory named `kernel-helper.sh` with the following content:
 ```bash
 #!/bin/bash -l
-module load python cudnn/8.2.0 nccl/2.11.4 cudatoolkit/21.9_11.4
+module load python cudnn/8.2.0 nccl/2.11.4 cudatoolkit
 exec "$@"
+```
+
+Give execution privileges to this file
+```bash
+chmod u+x kernel-helper.sh
 ```
 
 And that should be it. Now when you launch the JAX kernel on Perlmutter you should be able to run your jax code without issue.
